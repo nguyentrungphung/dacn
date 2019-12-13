@@ -1,0 +1,614 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background-color: #fff;
+    transition: all 1s;
+}
+
+.header .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header .header__left {
+    display: flex;
+    align-items: center;
+}
+
+.header .header__left .navbar-brand img {
+    width: 200px;
+    height: 65px;
+}
+
+.header .header__left .input-group {
+    margin-top: 10px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.header .header__left .categories {
+    flex-grow: 1;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.header .header__left .input-search {
+    flex-grow: 5;
+}
+
+.header .header__left .input-search form {
+    background-color: rgba(20, 23, 28, 0.05);
+}
+
+.header .header__left .input-search form .form-control {
+    background-color: transparent;
+    border-color: transparent;
+    transition: none;
+}
+
+.header .header__left .input-search form .form-control::placeholder {
+    font-size: 20px;
+}
+
+.header .header__left .input-search form .form-control:focus {
+    box-shadow: none;
+    background-color: #fff;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.header .header__left .input-search form .form-control:focus+.input-group-prepend .input-group-text {
+    background-color: #fff;
+    border-right-color: #fff;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.header .header__left .input-search form .form-control:focus+.input-group-prepend .input-group-text:hover {
+    background-color: #ec5252;
+    color: white;
+}
+
+.header .header__left .input-search form .input-group-prepend {
+    margin-left: -1px;
+}
+
+.header .header__left .input-search form .input-group-prepend .input-group-text {
+    background-color: transparent;
+    border-color: transparent;
+    color: #ec5252;
+}
+
+.header .header__left .input-search form .input-group-prepend .input-group-text:hover {
+    background-color: red;
+    color: white;
+}
+
+.header .navbar-nav {
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header .navbar-nav .nav-item .nav-link {
+    color: #505763;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 10px 15px;
+}
+
+.header .navbar-nav .nav-item .nav-link:hover {
+    background-color: rgba(20, 23, 28, 0.05);
+    border: 1px solid #cacbcc;
+    border-radius: 3px;
+}
+
+.header .navbar-nav .nav-item:nth-child(3) .nav-link {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    .header .bussiness,
+    .header .teach {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header .categories,
+    .header .input-search {
+        display: none;
+    }
+}
+
+.cover {
+    background-image: url(../Image/cover.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative;
+}
+
+.cover .cover_content {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 40%;
+}
+
+.cover .cover_content h1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.cover .cover_content p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.cover .cover_content .input .form-control {
+    padding: 20px;
+    border: none;
+    border-radius: 0;
+}
+
+.cover .cover_content .input .form-control::placeholder {
+    color: #a1a7b3;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.cover .cover_content .input .form-control:focus {
+    box-shadow: none;
+}
+
+.cover .cover_content .input .input-group-prepend .input-group-text {
+    background-color: #fff;
+    color: #ec5252;
+    border: none;
+    padding: 10px;
+}
+
+.cover .cover_content .input .input-group-prepend:hover .input-group-text {
+    background-color: #ec5252;
+    color: #fff;
+}
+
+.myIntro {
+    background: linear-gradient(to right, #521822, #ec5252);
+}
+
+.myIntro .intro_content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.myIntro .intro_content .intro_item .icon {
+    color: #ec5252;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.myIntro .intro_content .intro_item .icon_content {
+    padding-top: 10px;
+}
+
+.myIntro .intro_content .intro_item .icon_content p:first-child {
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.myIntro .intro_content .intro_item .icon_content p:last-child {
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.myCourse {
+    margin-top: 25px;
+}
+
+.myCourse .course_content {
+    width: 80%;
+    margin: auto;
+    padding-top: 4rem;
+}
+
+.myCourse .course_content .course_intro h2 {
+    color: #29303b;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.myCourse .course_content .myTab .nav {
+    justify-content: space-between;
+    border: none;
+}
+
+.myCourse .course_content .myTab .nav .nav-item:hover .nav-link {
+    border: none;
+}
+
+.myCourse .course_content .myTab .nav .nav-item .nav-link.active {
+    border: none;
+    border-bottom: 5px solid #007791;
+}
+
+.myCourse .course_content .myTab .nav .nav-item .nav-link {
+    color: #29303b;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.myCourse .course_content .myTab .tab-content {
+    margin-top: 25px;
+    position: relative;
+}
+
+.myCourse .course_content .myTab .tab-content a {
+    text-decoration: none;
+}
+
+.myCourse .course_content .myTab .tab-content a:hover {
+    box-shadow: 1px 1px 10px;
+}
+
+.myCourse .course_content .myTab .tab-content .card-title {
+    color: #29303b;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.myCourse .course_content .myTab .tab-content .card-text {
+    color: #686f7a;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.myCourse .course_content .myTab .tab-content .rating .rating_star {
+    color: #F4C150;
+    font-size: 13px;
+    font-weight: normal;
+    margin-right: 2px;
+}
+
+.myCourse .course_content .myTab .tab-content .rating span:nth-child(2) {
+    color: #686f7a;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.myCourse .course_content .myTab .tab-content .rating span:last-child(2) {
+    color: #686f7a;
+    font-size: 13px;
+    font-weight: normal;
+    margin-right: 2px;
+}
+
+.myCourse .course_content .myTab .tab-content .price {
+    text-align: right;
+}
+
+.myCourse .course_content .myTab .tab-content .price .old-price {
+    color: #686f7a;
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.myCourse .course_content .myTab .tab-content .price .new-price {
+    color: #29303b;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 33%;
+    left: -3%;
+    padding: 0;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    background-color: #fff !important;
+    box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.1);
+    z-index: 3;
+}
+
+.owl-prev span,
+.owl-next span {
+    color: #007791;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 0.6;
+}
+
+.owl-prev:focus,
+.owl-next:focus {
+    outline: none;
+}
+
+.owl-next {
+    left: unset;
+    right: -3%;
+}
+
+.myStudent {
+    margin-top: 25px;
+}
+
+.myStudent .student_content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.myStudent .student_content .card-title {
+    color: #29303b;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.myStudent .student_content .card-text {
+    color: #686f7a;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.myStudent .student_content .rating .rating_star {
+    color: #F4C150;
+    font-size: 13px;
+    font-weight: normal;
+    margin-right: 2px;
+}
+
+.myStudent .student_content .rating span:nth-child(2) {
+    color: #686f7a;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.myStudent .student_content .rating span:last-child(2) {
+    color: #686f7a;
+    font-size: 13px;
+    font-weight: normal;
+    margin-right: 2px;
+}
+
+.myStudent .student_content .price {
+    text-align: right;
+}
+
+.myStudent .student_content .price .old-price {
+    color: #686f7a;
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.myStudent .student_content .price .new-price {
+    color: #29303b;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn--white {
+    color: #686f7a;
+    font-size: 15px;
+    background-color: #fff;
+    padding: 11px, 12px;
+    border: #cacbcc;
+}
+
+.btn--white:hover {
+    color: #29303b;
+    background-color: #fff;
+    border: 1px solid #cacbcc;
+}
+
+.btn--purple {
+    color: #fff;
+    font-size: 15px;
+    background-color: #007791;
+    padding: 11px, 12px;
+    border: #6e1a52;
+}
+
+.btn--purple:hover {
+    color: #fff;
+    background-color: #007791;
+    border: 1px solid #007791;
+}
+
+.banner {
+    border-top: 10px solid #c64152;
+    background-color: black;
+}
+
+.banner .banner_top {
+    display: flex;
+}
+
+.banner .banner_top .banner_top-item {
+    width: 20%;
+    text-align: center;
+}
+
+.banner .banner_top .banner_top-item i {
+    color: white;
+}
+
+.categorie {
+    padding: 3em 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.categorie .categorie_top {
+    margin-bottom: 30px;
+}
+
+.categorie .categorie_top .categorie_top-item {
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0px 1px 8px 0px rgba(158, 158, 158, 0.75);
+    transition: 0.5s all;
+}
+
+.categorie .categorie_top .categorie_top-item i {
+    font-size: 40px;
+    color: #a37582;
+    padding-right: 16px;
+}
+
+.tosay {
+    background-color: #f7f8fa;
+    border-bottom: 1px solid #c3c7cf;
+    padding-bottom: 20px;
+}
+
+.tosay .tosay_item img {
+    width: 50px !important;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.tosay .partnerlogo {
+    padding-top: 32px;
+}
+
+.tosay .partnerlogo .row {
+    text-align: center;
+    margin: 0 5%;
+    padding-bottom: 24px;
+}
+
+.tosay .partnerlogo .partnerlogo_item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 32px 8px;
+}
+
+.tosay .teachonudemy .row .teachonudemy_item {
+    padding: 28px 50px;
+}
+
+.tosay .teachonudemy .row .teachonudemy_item a {
+    color: #29303b;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.tosay .teachonudemy .row .teachonudemy_item p {
+    padding-top: 5px;
+}
+
+.tosay .teachonudemy .row .teachonudemy_right {
+    border-right: 1px solid #dedfe0;
+}
+
+.footer .footer_top {
+    margin: 40px 0 30px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.footer .footer_top .footer_top-left {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 62%;
+}
+
+.footer .footer_top .footer_top-left .business a {
+    font-weight: bold;
+}
+
+.footer .footer_top .footer_top-left .business a:last-child {
+    font-weight: normal;
+}
+
+.footer .footer_top ul {
+    list-style: none;
+}
+
+.footer .footer_top ul li a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.footer .footer_top .footer_top-right {
+    position: relative;
+}
+
+.footer .footer_top .footer_top-right .footer_top-language {
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    border: 1px solid #686f7a;
+    padding: 9px 26px 9px 10px;
+    width: 200px;
+}
+
+.footer .footer_top .footer_top-right .footer_top-language span {
+    padding-left: 5px;
+}
+
+.footer .footer_top .footer_top-right .footer_top-language select {
+    padding-left: 5px;
+    padding-right: 60px;
+}
+
+.footer .footer_down {
+    border-top: 1px solid #dedfe0;
+    border-bottom: 8px solid #ec5252;
+    padding: 50px 0;
+}
+
+.footer .footer_down .row .col-6 {
+    padding: 0 30px;
+}
+
+.footer .footer_down .row .col-6 img {
+    margin-right: 30px;
+}
+
+.footer .footer_down .row .col-6:nth-child(2) ul {
+    list-style: none;
+}
+
+.footer .footer_down .row .col-6:nth-child(2) ul li {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer .footer_down .row .col-6:nth-child(2) ul li a {
+    text-decoration: none;
+    padding: 6px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,42 @@
+.header {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar i {
+    color: red;
+    font-size: 30px;
+}
+
+
+/* end header  */
+
+
+/* start listLesson  */
+
+.listLesson {
+    padding-top: 30px;
+}
+
+
+.folder {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.folder i {
+    font-size: 20px;
+    padding-left: 10px;
+    color: #8a8a8a;
+}
+
+.title {
+    background-image: url("https://gstatic.com/classroom/themes/img_bookclub.jpg");
+    color: #ffffff;
+    height: 200px;
+    margin-top: 25px;
+}

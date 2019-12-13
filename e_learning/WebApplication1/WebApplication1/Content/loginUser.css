@@ -1,0 +1,118 @@
+/* GLOBAL CSS */
+
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+    display: block;
+}
+
+
+/* END GLOBAL CSS */
+
+
+/* FORM LOGIN USER CSS */
+
+.form_login {
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    margin: 100px auto;
+    padding: 20px;
+    position: relative;
+}
+
+.form_login-title {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    z-index: 2;
+}
+
+.form_login-title h3 {
+    font-weight: bold;
+}
+
+.form_login form button {
+    width: 100%;
+}
+
+.form_login .form-group label {
+    font-weight: bold;
+}
+
+.form_login a {
+    text-decoration: underline;
+}
+
+
+/* END FORM LOGIN USER CSS */
+
+
+/***** Media queries *****/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .form_login {
+        padding: 20px 5px;
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .form_login {
+        padding: 20px 5px;
+        width: 90%;
+    }
+}
+
+@media (min-width: 416px) and (max-width: 767px) {
+    h3 {
+        font-size: 20px;
+    }
+    .form_login {
+        padding: 20px 5px;
+        width: 90%;
+    }
+    .form_login .form_login-title {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 415px) {
+    h1,
+    h2,
+    h3 {
+        font-size: 20px;
+    }
+    .form_login {
+        padding: 20px 5px;
+    }
+    .form_login .form_login-title {
+        padding: 5px;
+    }
+}

@@ -1,0 +1,660 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Online Courses - Learn Anything, On Your Schedule | Hutech</title>
+    <link rel="icon" type="image/png" href="~/Image/hutech-logo.png" sizes="196x196">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css -->
+
+
+
+    <link href="~/Content/owl.carousel.min.css" rel="stylesheet" />
+
+    <link href="~/Content/owl.theme.default.min.css" rel="stylesheet" />
+
+    <link href="~/Content/home.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <button class="navbar-toggler col-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-xl-7 col-lg-8 col-md-9 col-8 ">
+                <div class="header__left">
+                    <a class="navbar-brand" href="#"><img src="~/Image/hutech-logo.png" class="img-fluid" alt=""></a>
+                    <p class="categories"><i class="fa fa-clipboard-list"></i> Categories</p>
+                    <div class="input-search">
+                        <form action="">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search by anything" aria-label="Username" aria-describedby="basic-addon1">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-4 col-md-3">
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item bussiness">
+                            <a class="nav-link " href="#myCourse">Khóa Học</a>
+                        </li>
+                        <li class="nav-item teach">
+                            <a class="nav-link " href="@Url.Action("Dangnhap","User")">ClassRoom</a>
+                        </li>
+                        @*<li class="nav-item">
+                            <a class="nav-link " href="#"><i class="fa fa-shopping-cart"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="header__button">
+                                <button class="btn btn--white border">Log In</button>
+                                <button class="btn btn--purple">Login</button>
+                            </div>
+                        </li>*@
+                    </ul>
+
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <!-- end header -->
+    <!-- start cover -->
+    <div class="cover">
+        <div class="cover_content">
+            <h1>
+                Learn on your schedule
+            </h1>
+            <p>
+                Study any topic, anytime. Choose from thousands of expert-led courses now.
+            </p>
+            <div class="input">
+                <form action="">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="What do you want to learn?" aria-label="Username" aria-describedby="basic-addon1">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- end cover -->
+    <!-- start intro -->
+    <section class="myIntro">
+        <div class="intro_content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="intro_item d-flex">
+                        <div class="icon">
+                            <i class="fa fa-bullseye"></i>
+                        </div>
+                        <div class="icon_content">
+                            <p>100,000 online courses Explore a variety of fresh topics</p>
+                            <p>
+                                Explore a variety of fresh topics
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="intro_item d-flex">
+                        <div class="icon">
+                            <i class="fa fa-spinner"></i>
+                        </div>
+                        <div class="icon_content">
+                            <p>
+                                Expert instruction
+                            </p>
+                            <p>
+                                Find the right instructor for you
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="intro_item d-flex">
+                        <div class="icon">
+                            <i class="fa fa-sync"></i>
+                        </div>
+                        <div class="icon_content">
+                            <p>Lifetime access</p>
+                            <p>
+                                Learn on your schedule
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- end intro -->
+    <!-- start course -->
+
+
+    @RenderBody()
+
+    <section class="myStudent">
+        <div class="student_content">
+            <h3>Khóa học mới</h3>
+            <div class="student_course owl-carousel owl-theme">
+                <div class="card">
+                    <img class="card-img-top " src="~/Image/faces/angular.png" alt="Card image " style="height:150px">
+                    <div class="card-body ">
+                        <h4 class="card-title ">Angular JS</h4>
+                        <p class="card-text ">Phạm Thanh Thiên</p>
+                        <div class="rating d-flex">
+                            <div class="rating_star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half"></i>
+                            </div>
+                            <span>4.8</span>
+                            <span>(40000)</span>
+                        </div>
+                        <div class="price">
+                            <span class="old-price">$100.0</span>
+                            <span class="new-price">$50.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top " src="~/Image/faces/nodejs.png" alt="Card image " style="height:150px">
+                    <div class="card-body ">
+                        <h4 class="card-title ">Node JS</h4>
+                        <p class="card-text ">Nguyễn Trung Phụng</p>
+                        <div class="rating d-flex">
+                            <div class="rating_star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half"></i>
+                            </div>
+                            <span>4.8</span>
+                            <span>(40000)</span>
+                        </div>
+                        <div class="price">
+                            <span class="old-price">$100.0</span>
+                            <span class="new-price">$50.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top " src="~/Image/faces/react.png" alt="Card image " style="height:150px">
+                    <div class="card-body ">
+                        <h4 class="card-title ">React JS</h4>
+                        <p class="card-text ">Phạm Thanh Thiên</p>
+                        <div class="rating d-flex">
+                            <div class="rating_star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half"></i>
+                            </div>
+                            <span>4.8</span>
+                            <span>(40000)</span>
+                        </div>
+                        <div class="price">
+                            <span class="old-price"> $100.0</span>
+                            <span class="new-price">$50.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top " src="~/Image/faces/mongo.png" alt="Card image " style="height:150px">
+                    <div class="card-body ">
+                        <h4 class="card-title ">Mongo DB</h4>
+                        <p class="card-text ">Nguyễn Trung Phụng</p>
+                        <div class="rating d-flex">
+                            <div class="rating_star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half"></i>
+                            </div>
+                            <span>4.8</span>
+                            <span>(40000)</span>
+                        </div>
+                        <div class="price">
+                            <span class="old-price">$100.0</span>
+                            <span class="new-price">$50.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top " src="~/Image/faces/oracle.png" alt="Card image " style="height:150px">
+                    <div class="card-body ">
+                        <h4 class="card-title ">Oracle</h4>
+                        <p class="card-text ">Kiều Thống</p>
+                        <div class="rating d-flex">
+                            <div class="rating_star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half"></i>
+                            </div>
+                            <span>4.8</span>
+                            <span>(40000)</span>
+                        </div>
+                        <div class="price">
+                            <span class="old-price">$100.0</span>
+                            <span class="new-price">$50.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top " src="~/Image/faces/java.png" alt="Card image " style="height:150px">
+                    <div class="card-body ">
+                        <h4 class="card-title ">Java</h4>
+                        <p class="card-text ">Nguyễn Trung Phụng</p>
+                        <div class="rating d-flex">
+                            <div class="rating_star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half"></i>
+                            </div>
+                            <span>4.8</span>
+                            <span>(40000)</span>
+                        </div>
+                        <div class="price">
+                            <span class="old-price">$100.0</span>
+                            <span class="new-price">$50.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end myStudent -->
+    <!-- start banner -->
+    <section class="banner ">
+
+        <div class="banner_top  py-5 ">
+            <div class="banner_top-item ">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="banner_top-item">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="banner_top-item">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="banner_top-item">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="banner_top-item">
+                <i class="fab fa-react"></i>
+            </div>
+        </div>
+
+        <div class="row text-white text-center ">
+            <div class="col-3  py-5 ">
+                <i class="fab fa-react d-flex justify-content-end px-5"></i>
+            </div>
+            <div class="col-6 ">
+                <h4>Get personalized recommendations</h4>
+                <p>Answer a few questions for your top picks</p>
+                <button class="btn btn-danger">Get Started</button>
+            </div>
+            <div class="col-3 py-5 px-5 ">
+                <i class="fab fa-react d-flex justify-content-start"></i>
+            </div>
+        </div>
+        <div class="banner_top  py-5">
+            <div class="banner_top-item">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="banner_top-item">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="banner_top-item">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="banner_top-item">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="banner_top-item">
+                <i class="fab fa-react"></i>
+            </div>
+        </div>
+    </section>
+    <!-- end banner -->
+    <!-- start categorie -->
+    <section class="categorie ">
+        <h4>Top categories</h4>
+        <div class="categorie_top row  ">
+            <div class="col-3">
+                <div class="categorie_top-item">
+                    <span> <i class="fab fa-leanpub"></i></span>
+                    <span>Development</span>
+
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="categorie_top-item">
+                    <span> <i class="fab fa-leanpub"></i></span>
+                    <span>Development</span>
+
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="categorie_top-item">
+                    <span> <i class="fab fa-leanpub"></i></span>
+                    <span>Development</span>
+
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="categorie_top-item">
+                    <span> <i class="fab fa-leanpub"></i></span>
+                    <span>Development</span>
+
+                </div>
+            </div>
+        </div>
+        <div class="categorie_down categorie_top row">
+            <div class="col-3">
+                <div class="categorie_top-item">
+                    <span> <i class="fab fa-leanpub"></i></span>
+                    <span>Development</span>
+
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="categorie_top-item">
+                    <span> <i class="fab fa-leanpub"></i></span>
+                    <span>Development</span>
+
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="categorie_top-item">
+                    <span> <i class="fab fa-leanpub"></i></span>
+                    <span>Development</span>
+
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="categorie_top-item">
+                    <span> <i class="fab fa-leanpub"></i></span>
+                    <span>Development</span>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end categorie -->
+    <!-- start to say -->
+    <section class="tosay">
+        <div class="container">
+            <h4>What our students have to say</h4>
+            <div class="tosay_item owl-carousel owl-theme">
+                <div class="card">
+                    <div class="card-body ">
+                        <img src="~/Image/kh8.jpg" alt="" width="20px" class="d-inline">
+                        <p class="card-text d-inline pl-2">Jose Portilla</p>
+                        <div class="rating d-flex pt-3 ">
+                            <p>
+                                Thank you Hutech! You've renewed my passion for learning and my dream of becoming a web developer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body ">
+                        <img src="~/Image/kh8.jpg" alt="" width="20px" class="d-inline">
+                        <p class="card-text d-inline pl-2">Jose Portilla</p>
+                        <div class="rating d-flex pt-3">
+                            <p>
+                                Thank you Hutech! You've renewed my passion for learning and my dream of becoming a web developer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body ">
+                        <img src="~/Image/kh8.jpg" alt="" width="20px" class="d-inline">
+                        <p class="card-text d-inline pl-2">Jose Portilla</p>
+                        <div class="rating d-flex pt-3">
+                            <p>
+                                Thank you Hutech! You've renewed my passion for learning and my dream of becoming a web developer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body ">
+                        <img src="~/Image/kh8.jpg" alt="" width="20px" class="d-inline">
+                        <p class="card-text d-inline pl-2">Jose Portilla</p>
+                        <div class="rating d-flex pt-3">
+                            <p>
+                                Thank you Hutech! You've renewed my passion for learning and my dream of becoming a web developer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body ">
+                        <img src="~/Image/kh8.jpg" alt="" width="20px" class="d-inline">
+                        <p class="card-text d-inline pl-2">Jose Portilla</p>
+                        <div class="rating d-flex pt-3">
+                            <p>
+                                Thank you Hutech! You've renewed my passion for learning and my dream of becoming a web developer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body ">
+                        <img src="~/Image/kh8.jpg" alt="" width="20px" class="d-inline">
+                        <p class="card-text d-inline pl-2">Jose Portilla</p>
+                        <div class="rating d-flex pt-3">
+                            <p>
+                                Thank you Hutech! You've renewed my passion for learning and my dream of becoming a web developer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end card to say -->
+            <!-- Trusted  -->
+            <div class="trusted text-center pt-5">
+                <p>Trusted by companies of all sizes</p>
+            </div>
+            <!-- end Trusted  -->
+            <!-- partnerlogo -->
+            <div class="partnerlogo ">
+                <div class="row">
+                    <div class="partnerlogo_item">
+                        <img src="https://i.udemycdn.com/partner-logos/booking-logo.svg" alt="booking" width="151px" height="26px" class="logo">
+                    </div>
+                    <div class="partnerlogo_item">
+                        <img src="https://i.udemycdn.com/partner-logos/volkswagen-logo.svg" alt="volkswagen" width="32px" height="32px" class="logo">
+                    </div>
+                    <div class="partnerlogo_item">
+                        <img src="https://i.udemycdn.com/partner-logos/mercedes-logo.svg" alt="mercedes" width="118" height="28" class="logo">
+                    </div>
+                    <div class="partnerlogo_item">
+                        <img src="https://i.udemycdn.com/partner-logos/pinterest-logo.svg" alt="pinterest" width="115" height="28" class="logo">
+                    </div>
+                    <div class="partnerlogo_item">
+                        <img src="https://i.udemycdn.com/partner-logos/adidas-logo.svg" alt="adidas" width="47" height="32" class="logo">
+                    </div>
+                    <div class="partnerlogo_item">
+                        <img src="https://i.udemycdn.com/partner-logos/eventbrite-logo.svg" alt="eventbrite" width="115" height="32" class="logo">
+                    </div>
+                </div>
+
+            </div>
+            <!-- end partnerlogo -->
+            <div class="teachonudemy">
+                <div class="row text-center">
+                    <div class="col-6">
+                        <div class="teachonudemy_item teachonudemy_right ">
+                            <a href="#">Teach on Hutech</a>
+                            <p>Teach what you love. Udemy gives you the tools to create an online course.</p>
+                            <button class="btn btn-danger">Start teaching</button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="teachonudemy_item ">
+                            <a href="#">Hutech for Business</a>
+                            <p>Get unlimited access to 3,500+ of Udemy’s top courses for your team.</p>
+                            <button class="btn btn-danger">Get Hutech for Business</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end to say -->
+    <!-- start footer -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="footer_top-left">
+
+                <ul class="businesss">
+                    <li>
+                        <a href=""> <b> Hutech for Business</b></a>
+                    </li>
+                    <li>
+                        <a href=""> <b>Teach on Hutech</b> </a>
+                    </li>
+                    <li> <a href="">Hutech app</a></li>
+                </ul>
+
+
+                <ul>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li> <a href="">Blog</a></li>
+                </ul>
+
+
+                <ul>
+                    <li><a href="">Help and support</a></li>
+                    <li><a href="">Affiliate</a></li>
+                    <li> <a href="">Sitemap</a></li>
+                </ul>
+
+            </div>
+            <div class="footer_top-right">
+                <div class="footer_top-language">
+                    <span> <i class="fa fa-globe-americas"></i> </span>
+                    <select style="border: none">
+
+                        <option value="english">English</option>
+                        <option value="volvo">VN</option>
+                        <option value="saab">Korean</option>
+                        <option value="opel">Japan</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="footer_down">
+            <div class="row">
+                <div class="col-6">
+                    <img alt="Udemy" class="ufb-logo" src="~/Image/hutech-logo.png" width="110" height="32">
+                    <span> Copyright © 2019 Hutech, Inc.</span>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li><a href="#">Terms </a><a href="#">Privacy Policy and Cookie Policy</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer  -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+    <script>
+        $('.student_course').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    </script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+    <script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 50) {
+                $('.header').addClass('headerClass');
+            } else {
+                $('.header').removeClass('headerClass');
+            }
+
+        })
+    </script>
+</body>
+
+</html>

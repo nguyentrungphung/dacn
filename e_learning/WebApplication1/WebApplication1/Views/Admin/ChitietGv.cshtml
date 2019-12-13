@@ -1,0 +1,75 @@
+﻿@model WebApplication1.Models.Giangvien
+
+@{
+    ViewBag.Title = "ChitietGv";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>ChitietGv</h2>
+
+<div>
+    <h4>Giangvien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matkhau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matkhau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diachigv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diachigv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dienthoaigv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dienthoaigv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaysinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaysinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKhoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKhoa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Magv }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

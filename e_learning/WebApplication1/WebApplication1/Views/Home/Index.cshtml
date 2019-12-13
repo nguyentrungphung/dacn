@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebApplication1.Models.KhoaHoc>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<section id="myCourse" class="myCourse">
+    <div class="course_content">
+        <div class="row">
+            <div class="col-md-4 d-flex align-items-center" style=" background-image:url(../Image/abc.jpg); background-repeat: no-repeat;background-size: cover;background-position: center;">
+
+                <div class="course_intro" style="color:white">
+                    <h2 style="color:white">
+                        Sự lựa chọn các khóa học lớn nhất thế giới
+                    </h2>
+                    <p>
+                        Chọn từ hơn 100.000 khóa học video trực tuyến với các bổ sung mới được xuất bản mỗi tháng
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <div class="myTab">
+                    <!-- Nav pills -->
+                    <ul class="nav ">
+                        @Html.Action("Loai", "Home")
+                    </ul>
+                    <!-- end nav -->
+                    <div class="tab-content">
+                        <div class="tab-pane container active" id="dev">
+                            <div class="cuorse_items owl-carousel owl-theme">
+                                @foreach (var sp in Model)
+                                {
+                                    <a href="@Url.Action("Details","Home", new {id = sp.Makhoahoc })">
+                                        <div class="card">
+                                            <img class="card-img-top " src="~/Image/faces/@sp.hinhanh" alt="Card image " style="height:150px">
+                                            <div class="card-body ">
+                                                <h4 class="card-title ">@sp.Tenkhoahoc</h4>
+                                                <p class="card-text ">@sp.Nguoidang</p>
+                                                <div class="rating d-flex">
+                                                    <div class="rating_star">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half"></i>
+                                                    </div>
+                                                    <span>4.8</span>
+                                                    <span>(40000)</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                }
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                        </div>
+                    </div>
+
+                </div>
+</section>

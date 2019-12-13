@@ -1,0 +1,137 @@
+.banner {
+    background-image: url(../Image/cover.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 500px; */
+    position: relative;
+    color: #fff;
+}
+
+.banner_title {
+    width: 60%;
+    margin: 0 auto;
+    padding: 150px 0;
+}
+
+.banner_title img {
+    opacity: .8;
+    border-radius: 10px;
+}
+
+.banner_title button {
+    color: #fff;
+    padding: 10px 30px;
+    border-color: #fff;
+    border-radius: 30px;
+}
+
+.banner_title .evaluate .rating_star {
+    color: #F4C150;
+    font-size: 13px;
+    font-weight: normal;
+    margin-right: 2px;
+}
+
+.banner_title-content {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.info_item {
+    width: 100%;
+    background-color: #f6f8f8;
+}
+
+.info .nav-tabs .nav-link.active,
+.info .nav-tabs .nav-link:hover {
+    border-color: white white #dee2e6;
+}
+
+.info .nav-tabs .nav-link {
+    position: relative;
+    color: #4a4a4a;
+    padding: 10px 30px;
+}
+
+.info .nav-tabs .nav-link.active:before,
+.info .nav-tabs .nav-link:hover:before {
+    width: 100%;
+}
+
+.info .nav-tabs .nav-link:before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, #b4d3f5, #007bff);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.tab_title h1 {
+    font-size: 30px;
+    color: #007bff;
+}
+
+.tab_content-item i {
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.tab_content-item span {
+    color: #7c7b7b;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.tab_content-item h2 {
+    font-weight: normal;
+    font-size: 25px;
+    color: #007bff;
+}
+
+.collapsible {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin: 15px 0;
+    border-radius: 50px 20px 20px 50px;
+}
+
+.tab_content .active,
+.collapsible:hover {
+    box-shadow: 1px 1px 5px;
+}
+
+.collapsible:after {
+    content: '\002B';
+    font-size: 20px;
+    color: #007bff;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.tab_content .active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}

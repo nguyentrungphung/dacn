@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WebApplication1.Models.Khoa>
+
+@{
+    ViewBag.Title = "Khoa";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="color:blue">Danh Sách Khoa</h2>
+<p>
+
+    <a href="@Url.Action("ThemmoiKhoa","Admin")" class="btn btn-info" role="button">Thêm mới Khoa</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenKhoa)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenKhoa)
+            </td>
+            <td>
+                <a href="@Url.Action("ChitietKhoa", "Admin", new { id = item.MaKhoa })" class="btn btn-info" role="button" style="border:none; width:70px; margin-bottom:10px ">Chi tiết</a>
+                <a href="@Url.Action("SuaKhoa", "Admin", new { id = item.MaKhoa })" class="btn btn-info" role="button" style="background-color:green; border:none;  width:70px; margin-bottom:10px">Sửa</a>
+               
+            </td>
+        </tr>
+    }
+
+</table>

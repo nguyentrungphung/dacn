@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApplication1.Models.Lop>
+
+@{
+    ViewBag.Title = "Lop";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="color:blue">Danh Sách Lớp</h2>
+<p>
+
+    <a href="@Url.Action("ThemmoiLop","Admin")" class="btn btn-info" role="button">Thêm mới Lớp</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenLop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKhoa)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenLop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaKhoa)
+            </td>
+            <td>
+                <a href="@Url.Action("ChitietLop", "Admin", new { id = item.MaLop })" class="btn btn-info" role="button" style="border:none; width:70px; margin-bottom:10px ">Chi tiết</a>
+                <a href="@Url.Action("SuaLop", "Admin", new { id = item.MaLop })" class="btn btn-info" role="button" style="background-color:green; border:none;  width:70px; margin-bottom:10px">Sửa</a>
+
+            </td>
+        </tr>
+    }
+
+</table>

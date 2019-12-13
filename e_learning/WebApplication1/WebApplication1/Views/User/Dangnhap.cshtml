@@ -1,0 +1,33 @@
+﻿@using WebApplication1.Models
+@{
+    ViewBag.Title = "Dangnhap";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+@{
+    SinhVien kh = new SinhVien();
+}
+<div class="form_login">
+    <div class="form_login-title">
+        <h3>Đăng Nhập</h3>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+
+        @Html.ValidationSummary(true)
+        <form>
+            <div class="form-group">
+                <label>Mã số sinh viên</label>
+                <input type="text" class="form-control" name="TenDN" id="" placeholder="Mã số sinh viên">
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" class="form-control" name="Matkhau" id="" placeholder="Mật khẩu">
+            </div>
+
+            <button type="submit" class="btn btn-primary" @*href="@Url.Action("Montheosv", "Classroom", new { id = kh.Masv })"*@>Đăng nhập</button>
+
+        </form>
+        <a href="#">Quên mật khẩu ?</a>
+    }
+</div>

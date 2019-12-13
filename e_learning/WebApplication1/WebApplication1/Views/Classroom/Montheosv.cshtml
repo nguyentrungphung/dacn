@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<WebApplication1.Models.BaoCao>
+@{
+    ViewBag.Title = "Montheosv";
+    Layout = "~/Views/Shared/_LayoutClassroom.cshtml";
+}
+
+<div class="listLesson">
+    <div class="container">
+        <div class="row">
+            @foreach (var sp in Model)
+            {
+            <a  href="@Url.Action("Nopbai","Classroom", new {id = sp.MaMon })" style="color: black; text-decoration:none">
+                <div class="col-3">
+                    <div class="card" style="width: 17rem;">
+                        <img class="card-img-top" src="https://gstatic.com/classroom/themes/img_bookclub.jpg" alt="Card image cap ">
+                        <div class="content">
+                            <div class="card-body">
+                                <h5 class="card-title">@sp.Mon.TenMon</h5>
+                                <p class="card-text">@sp.Giangvien.HoTen</p>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid #e0e0e0;"></div>
+                        <div class="folder">
+                            <a href=""> <i class="fa fa-user-circle"></i></a>
+                            <a href=""> <i class="fa fa-folder"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            }
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebApplication1.Models.Giangvien>
+
+@{
+    ViewBag.Title = "Giangvien";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="color:blue">Danh Sách Giảng Viên</h2>
+<p>
+
+    <a href="@Url.Action("ThemmoiGv","Admin")" class="btn btn-info" role="button">Thêm mới giảng viên</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Matkhau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diachigv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dienthoaigv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngaysinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKhoa)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matkhau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diachigv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dienthoaigv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngaysinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaKhoa)
+            </td>
+            <td>
+
+                <a href="@Url.Action("ChitietGv", "Admin", new { id = item.Magv })" class="btn btn-info" role="button" style="border:none; width:70px; margin-bottom:10px ">Chi tiết</a>
+                <a href="@Url.Action("SuaGv", "Admin", new { id = item.Magv })" class="btn btn-info" role="button" style="background-color:green; border:none;  width:70px; margin-bottom:10px">Sửa</a>
+
+            </td>
+        </tr>
+    }
+
+</table>
