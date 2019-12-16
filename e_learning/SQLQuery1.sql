@@ -155,11 +155,15 @@ select * from KhoaHoc
 select * from Loai
 select * from SV_KH
 select * from BaoCao where Masv='1611060219'
+select * from BaoCao where Masv='1611060268'
 -----Khoa------
 INSERT Khoa(MaKhoa,TenKhoa) VALUES ('HUTECHCNTT',N'Cong Nghe Thong Tin')
 ----Lop------
 INSERT Lop (MaLop,TenLop,MaKhoa) VALUES('16DTHA2001','16DTHA2','HUTECHCNTT')
 ----SinhVien-----
+INSERT SinhVien(Masv,HoTen,Matkhau,Email,Diachisv,Dienthoaisv,Ngaysinh,MaLop)
+VALUES('1611060268',N'Pham Thanh Thien','1','phamthanhthien1910@gmail.com','asvavavdv','0888734797','10/19/1997','16DTHA2001')
+
 INSERT SinhVien(Masv,HoTen,Matkhau,Email,Diachisv,Dienthoaisv,Ngaysinh,MaLop)
 VALUES('1611060219',N'Nguyen Trung Phung','phung1','phung070374@gmail.com','asvavavdv','0345655350','07/03/1998','16DTHA2001')
 
@@ -189,24 +193,24 @@ INSERT Loai(MaLoai,TenLoai) VALUES('ANGULER',N'ANGULER')
 INSERT Loai(MaLoai,TenLoai) VALUES('JAVA',N'JAVA')
 ------KhoaHoc-----
 INSERT KhoaHoc(Makhoahoc,Tenkhoahoc,Nguoidang,Noidung,hinhanh,Ngaydang,MaLoai)
-VALUES ('CSD001',N'Cơ sở dữ liệu',N'Nguyen Trung Phung',N'aasfasfafafasf','fgwgw','11/29/2019','C#')
+VALUES ('CSD001',N'Cơ sở dữ liệu',N'Nguyen Trung Phung',N'aasfasfafafasf','CSDL.png','11/29/2019','C#')
 INSERT KhoaHoc(Makhoahoc,Tenkhoahoc,Nguoidang,Noidung,hinhanh,Ngaydang,MaLoai)
-VALUES ('NML001',N'Nhập môn lập trình',N'Nguyen Trung Phung',N'aasfasfafafasf','fgwgw','11/29/2019','C#')
+VALUES ('NML001',N'Nhập môn lập trình',N'Nguyen Trung Phung',N'aasfasfafafasf','C.jpg','11/29/2019','C#')
 INSERT KhoaHoc(Makhoahoc,Tenkhoahoc,Nguoidang,Noidung,hinhanh,Ngaydang,MaLoai)
-VALUES ('KNA001',N'Khởi nghiệp',N'Nguyen Trung Phung',N'aasfasfafafasf','fgwgw','11/29/2019','C#')
+VALUES ('KNA001',N'Khởi nghiệp',N'Nguyen Trung Phung',N'aasfasfafafasf','khoinghiep.png','11/29/2019','C#')
 INSERT KhoaHoc(Makhoahoc,Tenkhoahoc,Nguoidang,Noidung,hinhanh,Ngaydang,MaLoai)
 VALUES ('HTT001',N'Hệ thống thông tin',N'Nguyen Trung Phung',N'Hệ thống thông tin là một hệ thống bao gồm các yếu tố có quan hệ với nhau cùng làm nhiệm vụ thu thập, xử lý, lưu trữ và phân phối thông tin và dữ liệu và cung cấp một cơ chế phản hồi để đạt được một mục tiêu định trước.[1][2][3]
-Các tổ chức có thể sử dụng các hệ thống thông tin với nhiều mục đích khác nhau. Trong việc quản trị nội bộ, hệ thống thông tin sẽ giúp đạt được sự thông hiểu nội bộ, thống nhất hành động, duy trì sức mạnh của tổ chức, đạt được lợi thế cạnh tranh. Với bên ngoài, hệ thống thông tin giúp nắm bắt được nhiều thông tin về khách hàng hơn hoặc cải tiến dịch vụ, nâng cao sức cạnh tranh, tạo đà cho sự phát triển.','fgwgw','11/29/2019','C#')
+Các tổ chức có thể sử dụng các hệ thống thông tin với nhiều mục đích khác nhau. Trong việc quản trị nội bộ, hệ thống thông tin sẽ giúp đạt được sự thông hiểu nội bộ, thống nhất hành động, duy trì sức mạnh của tổ chức, đạt được lợi thế cạnh tranh. Với bên ngoài, hệ thống thông tin giúp nắm bắt được nhiều thông tin về khách hàng hơn hoặc cải tiến dịch vụ, nâng cao sức cạnh tranh, tạo đà cho sự phát triển.','hethongthongtin.jpg','11/29/2019','C#')
 INSERT KhoaHoc(Makhoahoc,Tenkhoahoc,Nguoidang,Noidung,hinhanh,Ngaydang,MaLoai)
-VALUES ('NNC001',N'Nhanh như chớp',N'Nguyen Trung Phung',N'aasfasfafafasf','fgwgw','11/29/2019','C#')
+VALUES ('NNC001',N'Nhanh như chớp',N'Nguyen Trung Phung',N'aasfasfafafasf','nhanhnhuchop.jpg','11/29/2019','C#')
 INSERT KhoaHoc(Makhoahoc,Tenkhoahoc,Nguoidang,Noidung,hinhanh,Ngaydang,MaLoai)
-VALUES ('ASP001',N'Lập Trình ASP.NET ',N'Nguyen Trung Phung',N'aasfasfafafasf','fgwgw','11/29/2019','C#')
+VALUES ('ASP001',N'Lập Trình ASP.NET ',N'Nguyen Trung Phung',N'aasfasfafafasf','asp.jpg','11/29/2019','C#')
 
 -----------BaoCao------------
 INSERT BaoCao(Masv,MaMon,Magv,Noidung,linkdemo,filedemo)
-VALUES ('1611060219','DACN01','CNTTGV0001',N'fhgafgakfkjahfjakhfjafjkagbfbfakjbvjb','afafafa',N'ffqfwfwfwfwfwfw')
+VALUES ('1611060268','DACN01','CNTTGV0001',N'fhgafgakfkjahfjakhfjafjkagbfbfakjbvjb','afafafa',N'ffqfwfwfwfwfwfw')
 INSERT BaoCao(Masv,MaMon,Magv,Noidung,linkdemo,filedemo)
-VALUES ('1611060219','DACS01','CNTTGV0001',N'fhgafgakfkjahfjakhfjafjkagbfbfakjbvjb','afafafa',N'ffqfwfwfwfwfwfw')
+VALUES ('1611060268','DACS01','CNTTGV0001',N'fhgafgakfkjahfjakhfjafjkagbfbfakjbvjb','afafafa',N'ffqfwfwfwfwfwfw')
 INSERT BaoCao(Masv,MaMon,Magv,Noidung,linkdemo,filedemo)
 VALUES ('1611060219','DATN01','CNTTGV0001',N'fhgafgakfkjahfjakhfjafjkagbfbfakjbvjb','afafafa',N'ffqfwfwfwfwfwfw')
 INSERT BaoCao(Masv,MaMon,Magv,Noidung,linkdemo,filedemo)
@@ -217,4 +221,4 @@ INSERT Baihoc(Mabaihoc,TenBaihoc,Ngaydang,Makhoahoc)
 VALUES ('BH0001',N'Bài 1: Giới thiệu SQL và SQL server ','06/16/2019','CSD001')
 ----------Video_baihoc-------
 INSERT Video_baihoc(Tenvideo,linkvideo,Mabaihoc)
-VALUES (N'[Khóa học sử dụng SQL server] - Bài 1: Giới thiệu SQL và SQL server','https://youtu.be/2fanjSYVElY','BH0001')
+VALUES (N'[Khóa học sử dụng SQL server] - Bài 1: Giới thiệu SQL và SQL server','aNMjdxVuII0','BH0001')

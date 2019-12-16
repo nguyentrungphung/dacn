@@ -72,7 +72,7 @@ namespace WebApplication1.Models
     #endregion
 		
 		public QldaDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["QldasvConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["QldasvConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -485,7 +485,7 @@ namespace WebApplication1.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_linkvideo", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_linkvideo", DbType="VarChar(1000) NOT NULL", CanBeNull=false)]
 		public string linkvideo
 		{
 			get

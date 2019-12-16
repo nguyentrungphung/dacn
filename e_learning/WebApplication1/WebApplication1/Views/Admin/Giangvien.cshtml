@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2 style="color:blue">Danh Sách Giảng Viên</h2>
+<h3 style="color:blue; font-weight:bold; margin:50px 0">Danh Sách Giảng Viên</h3>
 <p>
 
-    <a href="@Url.Action("ThemmoiGv","Admin")" class="btn btn-info" role="button">Thêm mới giảng viên</a>
+    <a href="@Url.Action("ThemmoiGv","Admin")" class="btn btn-outline-success" role="button"><i class="fa fa-plus"></i> Thêm mới giảng viên</a>
 </p>
 <table class="table">
     <tr>
@@ -62,8 +62,8 @@
             </td>
             <td>
 
-                <a href="@Url.Action("ChitietGv", "Admin", new { id = item.Magv })" class="btn btn-info" role="button" style="border:none; width:70px; margin-bottom:10px ">Chi tiết</a>
-                <a href="@Url.Action("SuaGv", "Admin", new { id = item.Magv })" class="btn btn-info" role="button" style="background-color:green; border:none;  width:70px; margin-bottom:10px">Sửa</a>
+                <a href="@Url.Action("ChitietGv", "Admin", new { id = item.Magv })"class="btn btn-success" role="button">Chi tiết</a>
+                <a href="@Url.Action("SuaGv", "Admin", new { id = item.Magv })" class="btn btn-primary" role="button">Sửa</a>
 
             </td>
         </tr>
